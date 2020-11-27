@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <br />
+<div id="subtes">
+
+    Ver la consola
+
+</div>
+
+
+<script>
+
+    window.onload = function () {
+        traerData();
+    };
+
+    function traerData() {
+        $.ajax("/Home/BuscarData").done(mostrarData).error(function (e) { console.log(e); });
+    }
+
+    function mostrarData(datos) {
+        console.log(datos);
+    }
+
+
+</script>
